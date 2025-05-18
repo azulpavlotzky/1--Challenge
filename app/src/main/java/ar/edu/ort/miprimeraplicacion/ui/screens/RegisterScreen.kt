@@ -12,7 +12,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontFamily
 import androidx.navigation.NavController
 import ar.edu.ort.miprimeraplicacion.ui.components.InputField
 import ar.edu.ort.miprimeraplicacion.ui.components.PrimaryButton
@@ -26,10 +25,11 @@ fun RegisterScreen(navController: NavController) {
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    Scaffold { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(innerPadding)
                 .padding(24.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally

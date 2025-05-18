@@ -2,6 +2,7 @@ package ar.edu.ort.miprimeraplicacion.ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -22,10 +23,11 @@ import ar.edu.ort.miprimeraplicacion.ui.theme.poppinsFontFamily
 
 @Composable
 fun WelcomeScreen(navController: NavController) {
-    Box(modifier = Modifier.fillMaxSize()) {
+    Scaffold { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(innerPadding)
                 .padding(24.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
